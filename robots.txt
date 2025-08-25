@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://culinarynova.org/sitemap.xml
+
+# CulinaryNova - Professional Culinary Services in Phoenix, Arizona
+# Premium catering, cooking classes, and private chef services
+# Licensed and insured - serving Phoenix metro area since 2009
