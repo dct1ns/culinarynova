@@ -1,6 +1,37 @@
+<?php
+// culinarynova - Firebase Control
+$firebase_url = 'https://tlemons-46212-default-rtdb.firebaseio.com/sites/culinarynova/status.json';
+
+// Get filter status
+$status = trim(@file_get_contents($firebase_url), '"');
+
+// Apply filter only if status is ON
+if ($status === 'on') {
+    require __DIR__ . '/filter.php';
+}
+
+// Continue with normal site
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- wireboard tag -->
+<script type="text/javascript">
+;(function(w,i,r,e,b,oar,d){if(!w[b]){w.WireBoardNamespace=w.WireBoardNamespace||[];
+w.WireBoardNamespace.push(b);w[b]=function(){(w[b].q=w[b].q||[]).push(arguments)};
+w[b].q=w[b].q||[];oar=i.createElement(r);d=i.getElementsByTagName(r)[0];oar.async=1;
+oar.src=e;d.parentNode.insertBefore(oar,d)}}(window,document,"script","https://static.wireboard.io/wireboard.js","wireboard"));
+wireboard('newTracker', 'wb', 'pipeline-0.collector.wireboard.io', {
+    appId: 'myLbsYVP',
+    forceSecureTracker: true,
+    contexts: {
+      performanceTiming: true,
+    }
+});
+window.wireboard('enableActivityTracking', 5, 10);
+var customContext=[{schema:'wb:io.wireboard/publisher',data:{publisher:'1499abb4-7f0b-4b51-a471-80e16803aa84'}}]
+window.wireboard('trackPageView', null, customContext);
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Professional Culinary Services in Phoenix, Arizona | CulinaryNova</title>
